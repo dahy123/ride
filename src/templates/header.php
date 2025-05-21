@@ -5,23 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Projet PHP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.php">Mini Projet PHP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="register.php">S'inscrire</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="show.php">Voir les inscrits</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container mt-4">
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Bienvenue sur notre site</h1>
+        <p>Inscrivez-vous pour en savoir plus sur la crypto-monnaie!</p>
+    </header>

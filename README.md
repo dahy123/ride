@@ -1,43 +1,53 @@
 # PHP Mini Project
 
 ## Description
-This project is a simple PHP application that allows users to register and view a list of registered users. It includes a registration form, a user list display, and basic navigation.
+This project is a simple PHP application that allows users to register and view a list of registered users. It includes a registration form, a page to display registered users, and basic navigation.
 
 ## Project Structure
 ```
 php-mini-project
 ├── assets
 │   ├── css
-│   │   └── styles.css        # Custom CSS styles for the project
-│   ├── js
-│   │   └── scripts.js        # JavaScript code for the project
+│   │   └── styles.css
+│   └── js
+│       └── scripts.js
 ├── src
-│   ├── database.php          # Handles database connections and queries
-│   ├── functions.php         # Contains utility functions used throughout the project
+│   ├── database.php
+│   ├── functions.php
 │   └── templates
-│       ├── header.php        # HTML for the header section of the pages
-│       └── footer.php        # HTML for the footer section of the pages
+│       ├── header.php
+│       └── footer.php
 ├── export
-│   └── export.php            # Handles the export functionality for user data
-├── register.php              # Registration form for users
-├── show.php                  # Displays a list of registered users
-├── index.php                 # Homepage with navigation links
-└── README.md                 # Documentation and instructions for the project
+│   └── export.php
+├── register.php
+├── show.php
+├── index.php
+└── README.md
 ```
 
-## Installation
+## Files Overview
+
+- **assets/css/styles.css**: Custom styles for the project.
+- **assets/js/scripts.js**: JavaScript code for client-side functionality.
+- **src/database.php**: Establishes a connection to the database and includes query functions.
+- **src/functions.php**: Utility functions for fetching registered users and other operations.
+- **src/templates/header.php**: HTML structure for the header section of the web pages.
+- **src/templates/footer.php**: HTML structure for the footer section of the web pages.
+- **export/export.php**: Handles the export functionality for registered user data.
+- **register.php**: Contains the registration form and processes submissions.
+- **show.php**: Displays a list of registered users in a table format.
+- **index.php**: The homepage with navigation links to other pages.
+
+## Setup Instructions
 1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Ensure you have a web server with PHP support (e.g., Apache, Nginx) and a database (e.g., MySQL) set up.
-4. Configure the database connection in `src/database.php`.
+2. Set up a database and update the database connection details in `src/database.php`.
+3. Run the application on a local server (e.g., XAMPP, MAMP).
+4. Access the application via your web browser at `http://localhost/php-mini-project/index.php`.
 
 ## Usage
-- Access the homepage at `index.php` to navigate to the registration form or view the list of registered users.
-- Fill out the registration form in `register.php` to add a new user.
-- View the list of registered users in `show.php`.
-
-## Contributing
-Feel free to fork the repository and submit pull requests for any improvements or features you would like to add.
+- Navigate to the registration page to sign up.
+- View the list of registered users on the corresponding page.
+- Use the export functionality to download user data.
 
 ## License
-This project is open-source and available under the MIT License.
+This project is open-source and available for modification and distribution.

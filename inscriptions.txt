@@ -1,0 +1,3 @@
+{"Nom":"dsq","Prénom":"dq","Âge":21,"Adresse":"dqsd","Connaissance Crypto":"yes","Connaissance Wallet":"no","Business en ligne":"yes","Wallet décentralisé":"no","Veut gagner argent":"no","Intérêt":"","Date":"2025-05-21 12:25:29"}
+{"Nom":"dsq","Prénom":"dq","Âge":21,"Adresse":"dqsd","Connaissance Crypto":"yes","Connaissance Wallet":"no","Business en ligne":"yes","Wallet décentralisé":"no","Veut gagner argent":"no","Intérêt":"","Date":"2025-05-21 12:26:50"}
+{"Nom":"dsq","Prénom":"dq","Âge":21,"Adresse":"dqsd","Connaissance Crypto":"yes","Connaissance Wallet":"no","Business en ligne":"yes","Wallet décentralisé":"no","Veut gagner argent":"no","Intérêt":"","Date":"2025-05-21 12:27:35"}

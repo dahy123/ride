@@ -1,25 +1,25 @@
 <?php
-// export.php
-
 require_once '../src/database.php';
 require_once '../src/functions.php';
+require '../vendor/autoload.php'; // Charge PhpSpreadsheet
 
-// Fetch registered users from the database
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+// Récupère les utilisateurs
 $users = getRegisteredUsers();
 
-// Set headers for the CSV file
-header('Content-Type: text/csv');
-header('Content-Disposition: attachment; filename="registered_users.csv"');
+$spreadsheet = new Spreadsheet();
+$sheet = $spreadsheet->getActiveSheet();
 
-// Open output stream
-$output = fopen('php://output', 'w');
+// En-têtes
+$headers = ['Nom', 'Prénom', 'Âge', 'Adresse', 'Connaissance Crypto', 'Portefeuille Électronique', 'Business en Ligne', 'Portefeuille Décentralisé', 'Gagner', 'Intérêt'];
+$sheet->fromArray($headers, NULL, 'A1');
 
-// Write the header row
-fputcsv($output, ['Nom', 'Prénom', 'Âge', 'Adresse', 'Connaissance Crypto', 'Portefeuille Électronique', 'Business en Ligne', 'Portefeuille Décentralisé', 'Gagner', 'Intérêt']);
-
-// Write user data
+// Données
+$row = 2;
 foreach ($users as $user) {
-    fputcsv($output, [
+    $sheet->fromArray([
         $user['nom'],
         $user['prenom'],
         $user['age'],
@@ -30,9 +30,16 @@ foreach ($users as $user) {
         $user['decentralized_wallet'],
         $user['want_to_earn'],
         $user['interest']
-    ]);
+    ], NULL, 'A' . $row);
+    $row++;
 }
 
-// Close output stream
-fclose($output);
+// Téléchargement du fichier XLSX
+header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+header('Content-Disposition: attachment;filename="registered_users.xlsx"');
+header('Cache-Control: max-age=0');
+
+$writer = new Xlsx($spreadsheet);
+$writer->save('php://output');
 exit;
+?>
